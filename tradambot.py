@@ -2,19 +2,19 @@ from imblearn.combine import SMOTETomek
 import lightgbm as lgb
 import ta
 import asyncio
-from soltrade.wallet import find_balance
+from tradambot.wallet import find_balance
 from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, classification_report, roc_auc_score
 import numpy as np
 import requests
 import pandas as pd
 import joblib
 import os
-from soltrade.transactions import perform_swap, market
+from tradambot.transactions import perform_swap, market
 from apscheduler.schedulers.background import BackgroundScheduler
 from apscheduler.executors.pool import ThreadPoolExecutor
-from soltrade.indicators import calculate_ema, calculate_rsi, calculate_macd, calculate_bbands, calculate_adx, calculate_stoch, calculate_obv
-from soltrade.log import log_general, log_transaction
-from soltrade.config import config
+from tradambot.indicators import calculate_ema, calculate_rsi, calculate_macd, calculate_bbands, calculate_adx, calculate_stoch, calculate_obv
+from tradambot.log import log_general, log_transaction
+from tradambot.config import config
 #from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split
 import json
@@ -53,7 +53,7 @@ def run_buy_script(token_address):
     from datetime import datetime
 
     script_path = "/Users/mac/buy_solana_coin/buy_tokens_100_percent_with_usdc.py.test"
-    LOG_FILE = "soltrade.log"
+    LOG_FILE = "tradambot.log"
     timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     command = ["python3", script_path, token_address]
 
@@ -821,7 +821,7 @@ def perform_analysis():
 
 # **Start trading bot**
 def start_trading():
-    log_general.debug("Soltrade has now initialized the trading algorithm.")
+    log_general.debug("tradambot has now initialized the trading algorithm.")
     
     executors = {'default': ThreadPoolExecutor(max_workers=3)}
     trading_sched = BackgroundScheduler(executors=executors)
@@ -833,5 +833,5 @@ def start_trading():
         while True:
             pass
     except KeyboardInterrupt:
-        log_general.debug("Stopping Soltrade...")
+        log_general.debug("Stopping tradambot...")
         trading_sched.shutdown()
