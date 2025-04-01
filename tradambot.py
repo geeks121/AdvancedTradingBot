@@ -52,7 +52,7 @@ def run_buy_script(token_address):
     import subprocess
     from datetime import datetime
 
-    script_path = "/Users/mac/buy_solana_coin/buy_tokens_100_percent_with_usdc.py.test"
+    script_path = "buy_tokens.py"
     LOG_FILE = "tradambot.log"
     timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     command = ["python3", script_path, token_address]
@@ -100,7 +100,7 @@ def run_sell_script(token_address):
     import subprocess, time
     from datetime import datetime
 
-    script_path = "/Users/mac/buy_solana_coin/sell_tokens_100_percent_to_usdc.py.test"
+    script_path = "/sell_tokens.py"
     LOG_FILE = "tradambot.log"
     command = ["python3", script_path, token_address]
 
