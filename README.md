@@ -55,3 +55,7 @@ PRIMARY_MINT=SOL
 SECONDARY_MINT=YOUR_TOKEN_ADDRESS
 SECONDARY_MINT_SYMBOL=ABC
 API_KEY2=your_cryptocompare_api_key
+
+
+🙏 Acknowledgements
+Special thanks to Soltrade, which served as an inspiration and foundation during the research and development of Tradambot. Portions of the strategy logic, structure, and design were adapted and enhanced based on insights gained from the Soltrade project.
