@@ -59,3 +59,7 @@ API_KEY2=your_cryptocompare_api_key
 
 🙏 Acknowledgements
 Special thanks to Soltrade, which served as an inspiration and foundation during the research and development of Tradambot. Portions of the strategy logic, structure, and design were adapted and enhanced based on insights gained from the Soltrade project.
+
+## ⚠️ Disclaimer
+
+This project is intended **for educational purposes only**. It is not financial advice. Use of this software for real trading is at your own risk. Always backtest and understand the implications before deploying with real funds.
