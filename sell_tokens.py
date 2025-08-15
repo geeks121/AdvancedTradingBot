@@ -24,7 +24,7 @@ INPUT_MINT = "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v"  # USDC (for selling
 OUTPUT_MINT = sys.argv[1]  # Token mint address to sell
 
 # Slippage (in basis points, e.g., 50 = 0.5%)
-SLIPPAGE_BPS = 10
+SLIPPAGE_BPS = 0.6
 
 # RPC URL
 RPC_URL = "https://mainnet.helius-rpc.com/?api-key="  # Replace with your preferred RPC
